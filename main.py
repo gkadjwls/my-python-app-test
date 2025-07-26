@@ -9,7 +9,7 @@ app = FastAPI()
 templates = Jinja2Templates(directory="app/templates")
 
 # 정적 파일 (필요 시 사용 가능)
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
+# app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 @app.get("/", response_class=HTMLResponse)
 def read_root(request: Request):
